@@ -1,7 +1,10 @@
 package condition1;
 
 public class DayOfWeek {
+
+    //Method untuk mengembalikan nama hari berdasarkan angka (1-7)
     public String getDayName (int day) {
+       //Menggunakan switch-case untuk menentukan nama hari
         switch (day) {
             case 1:
                 return "Day: Monday";

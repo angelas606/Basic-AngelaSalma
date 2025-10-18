@@ -1,8 +1,11 @@
 package condition2;
 
 public class NestedSwitch {
+
+    //Method untuk menentukan hasil pilihan berdasarkan category dan choice
     public String getSelection (int category, int choice) {
         String result = "";
+        //Menentukan category 
         switch (category) {
             case 1:
                 switch (choice) {
@@ -29,8 +32,10 @@ public class NestedSwitch {
                 }
                 break;
             default:
+                //Jika category tidak valid
                 result = category + ", Invalid category";
         }
+        //Mengembalikan hasil dari pilihan pengguna 
         return result;
     }
 }

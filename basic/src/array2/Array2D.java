@@ -2,13 +2,17 @@ package array2;
 
 public class Array2D {
 
+    //Method untuk mendaptkan informasi dari array 2 dimensi (matrix)
     public String getMatrixInfo(int[][] matrix) {
-        String result = "";
-        int total = 0;
-        int count = 0;
+        String result = ""; //Inisialisasi string hasil
+        int total = 0; //Inisialisasi total elemen matrix
+        int count = 0; //Inisialisasi jumlah elemen matrix
 
+        //Perulangan untuk mengakses tiap baris dari matrix
         for (int i = 0; i < matrix.length; i++) {
             result = result + "Row " + (i + 1) + ": ";
+
+            //Perulangan untuk mengakses tiap elemen dari baris matrix
             for (int j = 0; j < matrix[i].length; j++) {
                 int value = matrix[i][j];
                 total += value;
@@ -21,7 +25,9 @@ public class Array2D {
             result = result + "\n";
         }
 
+        //Menghitung rata-rata 
         double average = (double) total / count;
+        //Menambahkan total dan rata-rata ke dalam hasil 
         result = result + "Total: " + total + "\n";
         result = result + "Average: " + average;
 
